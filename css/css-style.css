@@ -1,9 +1,14 @@
 /* Base */
+
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+
+
 body {
   line-height: 1.7;
   color: gray;
   font-weight: 400;
   font-size: 1rem;
+  font-family: 'Quicksand', sans-serif;
 }
 
 ::selection {
@@ -31,7 +36,7 @@ h5,
 .h3,
 .h4,
 .h5 {
-  font-family: "Nunito", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-family: 'Quicksand', sans-serif;
 }
 
 .bg-light {
@@ -610,6 +615,10 @@ h5,
   min-height: calc(100vh);
   height: auto;
 }
+.site-blocks-cover:has(.hero) {
+  min-height: auto;
+  height: auto;
+}
 
 .site-blocks-cover .hero .overlay {
   background: linear-gradient(83deg, #FFF 33.44%, rgba(255, 255, 255, 0.00) 106.53%);
@@ -629,7 +638,7 @@ h5,
   overflow: hidden;
   align-items: flex-end;
   padding-bottom: 30px;
-  padding-top: 100px;
+  padding-top: 130px;
 }
 
 @media screen and (max-width: 991px) {
@@ -639,11 +648,11 @@ h5,
   }
 }
 
-.site-blocks-cover .hero .left-vector svg {
+.hero-section .left-vector svg {
   width: 100%;
 }
 
-.site-blocks-cover .hero .left-vector {
+.hero-section .left-vector {
   max-width: 200px;
   width: 100%;
   height: auto;
@@ -651,13 +660,14 @@ h5,
   top: 120px;
   left: -50px;
   bottom: auto;
+  z-index: 2;
 }
 
-.site-blocks-cover .hero .right-vector svg {
+.hero .right-vector svg {
   width: 100%;
 }
 
-.site-blocks-cover .hero .right-vector {
+.hero .right-vector {
   max-width: 200px;
   width: 100%;
   height: auto;
@@ -673,11 +683,11 @@ h5,
     padding-top: 130px !important;
   }
 
-  .site-blocks-cover .hero .left-vector {
-    top: 30px;
+  .hero-section .left-vector {
+    top: 95px;
   }
 
-  .site-blocks-cover .hero .right-vector {
+  .hero .right-vector {
     top: 30px;
   }
 
@@ -1532,4 +1542,36 @@ h2 span {
     padding-left: 0;
     padding-right: 0;
   }
+}
+
+.w-c-us .section.left-vector {
+  left: -70px;
+}
+.w-c-us .section.right-vector {
+  top: 37%;
+  right: 35px;
+}
+.section.left-vector.contact-us-left {
+  top: 45px;
+}
+
+.gray-wrapper .section.left-vector {
+  z-index: 1;
+  top: 8%;
+  left: -105px;
+}
+.gray-wrapper .section.right-vector {
+  z-index: 1;
+  top: 30%;
+  right: -30px;
+}
+.gray-wrapper .section.right-vector.lines {
+  z-index: 1;
+  top: 8%;
+  right: 0;
+}
+
+.white-back {
+  z-index: 2;
+  position: relative;
 }
