@@ -170,10 +170,9 @@ jQuery(document).ready(function($) {
 	    margin: 0,
 		dots:true,
 		dotsEach:true,
-	    smartSpeed: 1000,
-		autoplaySpeed: 100,
-	    autoplay: true,
-	    pauseOnHover: false,
+		autoplay: true,
+		autoplayTimeout: 1000,
+		autoplayHoverPause: true,
 		responsive: {
 			0: {
 			  items: 1
@@ -205,9 +204,9 @@ jQuery(document).ready(function($) {
 	    margin: 0,
 		dots:true,
 		dotsEach:true,
-	    smartSpeed: 1000,
-		autoplaySpeed: 100,
-	    autoplay: true,
+		autoplay: true,
+		autoplayTimeout: 1000,
+		autoplayHoverPause: true,
 	    pauseOnHover: false,
 		nav: true,
 	    navText: ['<span class="icon-keyboard_arrow_left">', '<span class="icon-keyboard_arrow_right">'],
