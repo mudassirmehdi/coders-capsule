@@ -269,22 +269,55 @@ jQuery(document).ready(function($) {
 	siteSticky();
 
 	// navigation
-  var OnePageNavigation = function() {
-    var navToggler = $('.site-menu-toggle');
-   	$("body").on("click", ".main-menu li a[href^='#'], .smoothscroll[href^='#'], .site-mobile-menu .site-nav-wrap li a", function(e) {
-      e.preventDefault();
+//   var OnePageNavigation = function() {
+//     var navToggler = $('.site-menu-toggle');
+//    	$("body").on("click", ".main-menu li a[href^='#'], .smoothscroll[href^='#'], .site-mobile-menu .site-nav-wrap li a", function(e) {
+//       e.preventDefault();
 
-      var hash = this.hash;
+//       var hash = this.hash;
 
-      $('html, body').animate({
-        'scrollTop': $(hash).offset().top - 0
-      }, 1000, 'easeInOutCirc', function(){
-        window.location.hash = hash;
-      });
+//       $('html, body').animate({
+//         'scrollTop': $(hash).offset().top - 0
+//       }, 1000, 'easeInOutCirc', function(){
+//         window.location.hash = hash;
+//       });
 
-    });
-  };
-  OnePageNavigation();
+//     });
+//   };
+//   OnePageNavigation();
+
+
+	$(".nav-link").click(function (e) {
+		e.preventDefault();
+		var target = $(this).attr('href');
+		$(target).addClass('active');
+		var headerHeight = $("#site__header").outerHeight() || 0;  // Replace 'your-header-id' with the actual ID or class of your header
+		$('html, body').animate({
+			scrollTop: $(target).offset().top - (headerHeight + 150)  // Subtract header height here
+		}, 100);
+	});
+
+
+	var addClassOnScroll = function () {
+		var windowTop = $(window).scrollTop();
+		$('section[id]').each(function (index, elem) {
+			var offsetTop = $(elem).offset().top;
+			var outerHeight = $(this).outerHeight(true);
+
+			if (windowTop > (offsetTop - 50) && windowTop < (offsetTop + outerHeight)) {
+				var elemId = $(elem).attr('id');
+				$("main-menu li  a.active").removeClass('active');
+				$("main-menu li  a[href='#" + elemId + "']").addClass('active');
+			}
+		});
+	};
+
+	$(function () {
+		$(window).on('scroll', function () {
+			addClassOnScroll();
+		});
+	});
+
 
   var siteScroll = function() {
 
