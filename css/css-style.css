@@ -136,7 +136,7 @@ h5,
   background: rgba(175, 175, 175, 0.10);
   border: none;
   backdrop-filter: blur(14px);
-  height: 55px; 
+  height: 55px;
   font-family: "Nunito", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
 
@@ -149,19 +149,19 @@ h5,
 .form-control:active,
 .form-control:focus {
   border-radius: 5px !important;
-  border: 1px solid #4285F4; 
-  background: #FFF; 
-  box-shadow: 0px 4px 28px 0px rgba(0, 0, 0, 0.10); 
-  
+  border: 1px solid #4285F4;
+  background: #FFF;
+  box-shadow: 0px 4px 28px 0px rgba(0, 0, 0, 0.10);
+
 }
 
 .form-group label {
-  color: #232323 !important; 
+  color: #232323 !important;
   font-family: Quicksand;
   /* font-size: 18px; */
   font-style: normal;
   font-weight: 500;
-  line-height: 32px; 
+  line-height: 32px;
 }
 
 
@@ -789,7 +789,7 @@ h2 span {
 }
 
 .site-blocks-cover p {
-  color: #3A3A3A; 
+  color: #3A3A3A;
   font-family: Quicksand;
   font-size: 20px;
   font-style: normal;
@@ -1001,7 +1001,7 @@ h2 span {
 }
 
 .unit-4 h3 {
-  color: #121212; 
+  color: #121212;
   font-family: Quicksand;
   font-size: 24px;
   font-style: normal;
@@ -1019,7 +1019,7 @@ h2 span {
   -o-transition: .3s all ease;
   transition: .3s all ease;
 
-  color: #3A3A3A;  
+  color: #3A3A3A;
   font-family: Quicksand;
   font-size: 16px;
   font-style: normal;
@@ -1111,7 +1111,7 @@ h2 span {
   color: #fff;
 }
 
-.unit-4:hover p { 
+.unit-4:hover p {
 
   font-family: Quicksand;
   font-size: 16px;
@@ -1628,20 +1628,20 @@ h2 span {
 
 .footer .footer-item h4 {
   margin-bottom: 30px;
-  color: #232323; 
+  color: #232323;
   font-family: Quicksand;
   font-size: 24px;
   font-style: normal;
-  font-weight: 700; 
+  font-weight: 700;
 }
 
 .footer .footer-item ul li a {
-  color: #000; 
+  color: #000;
   font-family: Quicksand;
   font-size: 18px;
   font-style: normal;
   font-weight: 400;
-  line-height: 219%; 
+  line-height: 219%;
 }
 
 .footer .contact-info ul li {
@@ -1650,11 +1650,11 @@ h2 span {
 }
 
 .footer .contact-info ul li p {
-  color: #3A3A3A; 
+  color: #3A3A3A;
   font-family: Quicksand;
   font-size: 18px;
   font-style: normal;
-  font-weight: 400; 
+  font-weight: 400;
 }
 
 .footer .contact-info ul li .icon {
@@ -1665,7 +1665,7 @@ h2 span {
   align-items: center;
   justify-content: center;
   border-radius: 50%;
-  
+
 }
 .footer .footer-social ul {
   display: flex;
@@ -1678,9 +1678,38 @@ h2 span {
   display: flex;
   align-items: center;
   justify-content: center;
-  border-radius: 50%; 
+  border-radius: 50%;
 }
 
 .footer .footer-social ul li a .social-icon img {
   width: 30px;
+}
+
+/* Media Queries */
+@media screen and (max-width: 768px) {
+.left-vector{
+  display: none;
+}
+.right-vector{
+  display: none;
+}
+.site-blocks-cover {
+  text-align: center;
+}
+.feature-big {
+  text-align: center;
+}
+.footer{
+  text-align: center;
+}
+.footer ul{
+  text-align: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.footer-social ul{
+  flex-direction: row;
+}
 }
